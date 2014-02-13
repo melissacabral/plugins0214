@@ -1,0 +1,14 @@
+#rad-corner-ribbon{
+	position: fixed;
+	top:0;
+	left:0;
+}
+.admin-bar #rad-corner-ribbon{
+	top:32px;
+}
+/*hide the ribbon when the screen is less than 600px wide*/
+@media screen and (max-width:600px){
+	#rad-corner-ribbon{
+		display:none;
+	}
+}
