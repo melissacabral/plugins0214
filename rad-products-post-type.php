@@ -27,6 +27,30 @@ function rad_register_cpt(){
 		),
 		'has_archive' => true,
 	) );
+
+	//add a "brand" taxonomy to the product post type
+	register_taxonomy( 'brand', 'product', array(
+		'hierarchical' => true,
+		'labels' => array(
+			'name' => 'Brands',
+			'singular_name' => 'Brand',
+			'add_new_item' => 'Add new Brand',
+			'search_items' => 'Search Brands',
+			'parent_item' => 'Parent Brand',
+		),
+	) );
+
+	//add a "feature" taxonomy to the product post type
+	register_taxonomy( 'feature', 'product', array(
+		'hierarchical' => false,
+		'labels' => array(
+			'name' => 'Features',
+			'singular_name' => 'Feature',
+			'add_new_item' => 'Add new Feature',
+			'search_items' => 'Search Features',
+			'separate_items_with_commas' => 'Separate features with commas',
+		),
+	) );
 }
 
 /**
